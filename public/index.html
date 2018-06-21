@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>CSS Technical Documentation Page</title>
+  <link rel='icon' type='image/png' href='./favicon.png' />
+</head>
+
+<body>
+  <div id='menu'>
+    <div class='menu-section'>
+      Introduction
+    </div>
+    <div class='menu-section'>
+      What you should already know
+    </div>
+    <div class='menu-section'>
+      CSS preprocessors
+    </div>
+    <div class='menu-section'>
+      Hello World
+    </div>
+    <div class='menu-section'>
+      Border
+    </div>
+    <div class='menu-section'>
+      Width
+    </div>
+    <div class='menu-section'>
+      Height
+    </div>
+    <div class='menu-section'>
+      Margin
+    </div>
+    <div class='menu-section'>
+      Padding
+    </div>
+    <div class='menu-section'>
+      Background
+    </div>
+    <div class='menu-section'>
+      Color
+    </div>
+    <div class='menu-section'>
+      Links
+    </div>
+    <div class='menu-section'>
+      Cursor
+    </div>
+    <div class='menu-section'>
+      Pseudo classes
+    </div>
+    <div class='menu-section'>
+      CSS and JavaScript
+    </div>
+  </div>
+  <div id='docs'>
+    <div class='docs-section'>
+      <h1>Introduction</h1>
+      <p>Styling HTML in the before time.</p>
+      <p>Cascading Style Sheets (CSS)</p>
+      <p>We can control how to display HTML elements, how to make them look, or whether to display things or not, all while allowing you to change the display depending on the users device and interaction.</p>
+
+      <p>Note that the following is only a preliminary guide to CSS and not designed to be comprehensive. For more information, see MDN, W3, CSStricks or search on stackexchange and google</p>
+
+      <!-- Maybe add links to blank popups with each output? -->
+    </div>
+    <div class='docs-section'>
+      <h1>What you should already know</h1>
+      <p>In this doc we assume you are familiar and comfortable with HTML. Only the last section assumes knowledge of Javascript, as we demonstrate how to control CSS with far more reach than what pseudo classes allow.</p>
+    </div>
+    <div class='docs-section'>
+      <h1>CSS preprocessors</h1>
+      <p>SCSS, LESS, etc... far more control than CSS alone, compile CSS so isn't technically different (?) but different as things compile and that's it.</p>
+    </div>
+    <div class='docs-section'>
+      <h1>Hello World</h1>
+      <p>To demonstrate the different feautres of CSS discussed here we will be styling the following simple page</p>
+      <div class='code'>
+        <code>
+           &lt;html><br>
+            &nbsp;&nbsp;&lt;body><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p id='id-text'><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello World<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='class-text'><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goodbye World<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p><br>
+            &nbsp;&nbsp;&lt;/body><br>
+          &lt;/html>
+        </code>
+      </div>
+      To style an element we will need to assign the styles to that element specifically. There are three different ways to access an element in CSS. Firstly, an HTML tag can be accessed by its name, e.g.,
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;// styles go here<br>
+          }
+        </code>
+      </div>
+      If we tried to do this with the paragraph tags to style the text elements we would only be able to change both at the same time as any style assigned to a paragraph tag styles every paragraph tag. To style individual elements we use the IDs and class names as follows
+      <div class='code'>
+        <code>
+          #id-text {<br>
+          &nbsp;&nbsp;// styles go here<br>
+          }<br>
+          .class-text {<br>
+           &nbsp;&nbsp;// styles go here<br>
+          }
+        </code>
+      </div>
+      Any HTML element with an ID can be assigned styles with <code>#ID</code>, and any element with a class can be assigned styles with <code>.class</code>
+    </div>
+    <div class='docs-section'>
+      <h1>Borders</h1>
+      To get a good idea of all the changes we will be making we will give our elements some borders. A border has a width, a style and a color, each of which can be assigned using
+      <div class='code'>
+        <code>
+          border-width: // width, e.g., 1px<br>
+          border-style: // style, e.g., solid<br>
+          border-color: // color, e.g., black
+        </code>
+      </div>
+      You can also set a border all in one with
+      <div class='code'>
+        <code>
+          border: width style color;
+        </code>
+      </div>
+      where the three properties can be written in any order. To see each of the changes we will assign the body and both text elements with different borders.
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;border: 1px solid black;<br>
+          }<br>
+          #id-text {<br>
+            &nbsp;&nbsp;border: 2px dashed red<br>
+          }<br>
+          .class-text {<br>
+            &nbsp;&nbsp;border: 3px double blue<br>
+          }<br>
+        </code>
+      </div>
+      The basic styles available for borders are dotted, dashed, solid, double, groove, ridge, inset, outset, none, and hidden. You can also access each side of the border using
+      <code>border-top</code>
+      <code>border-right</code>
+      <code>border-bottom</code>
+      <code>border-left</code>
+      and combine these to make more complex borders, e.g.,
+      <div class='code'>
+        <code>
+          border-top: 1px solid black;<br>
+          border-bottom: 2px dotted blue;
+        </code>
+      </div>
+      or in one line with
+      <div class='code'>
+        <code>
+          border-color: top-color right-color bottom-color left-color;
+        </code>
+      </div>
+      or
+      <div class='code'>
+        <code>
+          border-color: top-bottom-color right-left-color;
+        </code>
+      </div>
+
+      Do all three properties always need to be present? Example.
+      Rounded edges using border-radius.
+    </div>
+    <div class='docs-section'>
+      <h1>Code format</h1>
+      Before moving on to the rest of the documentation, it is important to format your code properly in order to get the styles you wish. Compare
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;margin: 5px;<br>
+            &nbsp;&nbsp;margin-left: 0;<br>
+          }
+        </code>
+      </div>
+      to
+      <div class='code'>
+        <code>
+          body {</br>
+            &nbsp;&nbsp;margin-left: 0;<br>
+            &nbsp;&nbsp;margin: 5px;<br>
+          }
+        </code>
+      </div>
+      In the first example we have the margin on the left is 0, while in the second example the margin on the left is 5 pixels. If you have multiple commands styling the same element, only the last one will be used. While this may seem a little absurb an issue: why would we try to style something twice? This may not be a problem on a small project, but on a larger project, or one where you import other style sheets (e.g., Bootstrap) then it is possible to have elements styled in more place than one. If you are not seeing the CSS you have written being displayed properly, it is possible that the code is correct but different styles are defined elsewhere and take precedence. To deal with this, you can give any command precedence over all others by doing the following
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;margin-left: 0 !important;<br>
+            &nbsp;&nbsp;margin: 5px;<br>
+          }
+        </code>
+      </div>
+      Now we see our margin on the left is 0 again. If a style you want is not displaying properly you can try to use this, but you should generally try to see if re-writing the code will get the styles you want first (e.g., the first example is a better way to remove the margin on the left than using <code>!important</code>). However, if you have imported many different styling packages sometimes and cannot find a simple fix for things being ignored, the important tag can be much simpler than looking through large packages and trying to re-write them.
+    </div>
+    <div class='docs-section'>
+      <h1>Width</h1>
+      Every element has a width.
+
+      Make page smaller with one paragraph larger, one smaller. Also cover overflow?
+    </div>
+    <div class='docs-section'>
+      <h1>Height</h1>
+      Similar to width, every element has a height
+    </div>
+    <div class='docs-section'>
+      <h1>Margin</h1>
+      There are two main methods to alter the spacing of an element while not changing content inside the element, e.g., suppose we want to display our page in the middle of the window. We want to move this element to the center without changing its size or appearance. The first approach is with margins that give us a way to style how much space should be around an element. For example,
+      <div class='code'>
+        <code>
+          margin: 5px;
+        </code>
+      </div>
+      will put 5 pixels of space around any element it is assigned to. Again, we can assign each side individually with
+      <code>margin-top</code>
+      <code>margin-right</code>
+      <code>margin-bottom</code>
+      <code>margin-left</code>
+      or in one line as
+      <div class='code'>
+        <code>
+          margin: margin-top margin-right margin-bottom margin-left;
+        </code>
+      </div>
+      or
+      <div class='code'>
+        <code>
+          margin: margin-top-bottom margin-right-left;
+        </code>
+      </div>
+      Example ...
+
+      One special value that can be applied to margins is <code>auto</code>. This allows us to center an object automatically using CSS instead of having to compute how large the element is, how large the page is, and center accordingly.
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;margin: 0 auto;<br>
+          }
+        </code>
+      </div>
+      However, note the following does not change anything
+      <div class='code'>
+        <code>
+          body {<br>
+            &nbsp;&nbsp;margin: auto 0;
+          }
+        </code>
+      </div>
+      Explanation. Width is easy, height is relative; Why?
+    </div>
+    <div class='docs-section'>
+      <h1>Padding</h1>
+      While a margin adds space around an element, sometimes you may wish to add space inside the element. For example, instead of putting space around the first paragraph, maybe we want to push the border out with space inside. Similar to margins we can do this with
+      <div class='code'>
+        <code>
+          padding: 5px;
+        </code>
+      </div>
+      or to each side individually, or the combinations in one line, as above. Together, we can do ...
+    </div>
+    <div class='docs-section'>
+      <h1>Background</h1>
+      If we don't want our space, or specific elements in our page, to have a white background, we may use
+      <div class='code'>
+        <code>
+          background: // colour, e.g., black
+        </code>
+      </div>
+      The background style will change everything within the border, but not outside, so depending on how you wish to style an element with a background you should select either margin or padding carefully.
+      E.g., margin on one, padding on the other.
+    </div>
+    <div class='docs-section'>
+      <h1>Color</h1>
+      If we try to make the background of any of the elements in our Hello World page black, we will not be able to see the text. Similar to the background command we can change the text colour of an element with
+      <div class='code'>
+        <code>
+          color: // color, e.g., white
+        </code>
+      </div>
+    </div>
+    <div class='docs-section'>
+      <h1>Links</h1>
+      Something ubiquitous on the web: hyperlinks. While they are almost simply text displaying on the page that have a function, there is a lot more to style than simply the colour of the text. For example, on an unstyled page a link is displayed in the colour blue, however after you have clicked on the link it will turn purple. There are four different styles on can apply to links. To style all hyperlinks we have
+      <div>
+        <code>a:link</code> -- a normal, unvisited link
+        <code>a:visited</code> -- a link after the user has visited
+        <code>a:hover</code> -- a link when the user hovers over it
+        <code>a:active</code> -- a link when it is being clicked
+      </div>
+      To style particular hyperlinks you simply need to give them an id or class and use the id name or class name instead.
+      
+      You have like seen pages with the default
+      // link blue and visited purple
+      As these occur in a particular order, e.g., visited only occurs after a link has been visited, we must be careful to style these in order.
+      hover after link/visited
+      active after hover
+      What if we don't? Example...
+
+      Lastly, we can change the underline as well.
+      // text-decoration
+      Note that in every situation we have the dotted outline when and after clicking a link. This can be removed with focus, however this is not recommended in most situations as the dotted line can be used as an accessibility feature. Namely, for someone that is not using a mouse the dotted line around the link is the only way to tell that it is active. Removing this would mean some users would not be able to open links without much more work. (Imagine a page with links displayed on top of one another, beside on another, in different div elements also styled around the page.)
+    </div>
+    <div class='docs-section'>
+      <h1>Cursor</h1>
+      Note that when we hover over a link the mouse changes. This is...
+      // cursor
+    </div>
+    <div class='docs-section'>
+      <h1>Pseudo classes</h1>
+      The styling we saw with links is an example of a pseudo class and not simply something only to style links. For example
+      // style something with a background changing with hover.
+
+      :after needs content or context(?)
+    </div>
+    <div class='docs-section'>
+      <h1>CSS and JavaScript</h1>
+      Pseudo classes allow us to a lot more with styles, but using JavaScript you can do vastly more.
+      .style ...
+      You can both set a style that doesn't exist, or change a style that does.
+
+      In jQuery this is $()....
+      In React you use refs or inline styles
+      
+    </div>
+  </div>
+
+  <div id="app"></div>
+  <script src="./bundle.js"></script>
+</body>
+
+</html>
