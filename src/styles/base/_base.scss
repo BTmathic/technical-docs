@@ -1,26 +1,68 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: $m-size;
+  display: flex;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:disabled {
-    cursor: default;
+  cursor: default;
 }
 
-code, .code {
-  background: lightGrey;
+#menu {
+  border-right: 2px solid #C0C0C0;
+  color: darken(#C0C0C0, 25%);
+  height: 100vh;
+  position: fixed;
+  #menu-contents {
+    height: 90vh;
+    overflow: scroll;
+    div {
+      border: 1px solid #C0C0C0;
+      font-size: 125%;
+      width: 250px;
+    }
+  }
+  #menu-header {
+    border: 2px solid #C0C0C0;
+    font-size: 125%;
+    font-weight: bold;
+    padding: 25px 5px 25px 10px;
+  }
+  .menu-section {
+    cursor: pointer;
+    padding: 10px;
+  }
+  .menu-section:hover {
+    background: lighten(grey,20%);
+  }
 }
 
-.code {
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
+#docs {
+  padding-right: 10px;
+  h1 {
+    padding-left: 325px;
+  }
+  p {
+    margin-left: 350px;
+  }
+  .code, .non-code-block {
+    margin-left: 375px;
+  }
+  code, .code {
+    background: lightGrey;
+  }
+  .code {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: calc(90% - 375px);
+  }
 }

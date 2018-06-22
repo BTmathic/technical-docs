@@ -10,50 +10,58 @@
 
 <body>
   <div id='menu'>
-    <div class='menu-section'>
-      Introduction
+    <div id='menu-header'>
+      CSS Documentation
     </div>
-    <div class='menu-section'>
-      What you should already know
-    </div>
-    <div class='menu-section'>
-      CSS preprocessors
-    </div>
-    <div class='menu-section'>
-      Hello World
-    </div>
-    <div class='menu-section'>
-      Border
-    </div>
-    <div class='menu-section'>
-      Width
-    </div>
-    <div class='menu-section'>
-      Height
-    </div>
-    <div class='menu-section'>
-      Margin
-    </div>
-    <div class='menu-section'>
-      Padding
-    </div>
-    <div class='menu-section'>
-      Background
-    </div>
-    <div class='menu-section'>
-      Color
-    </div>
-    <div class='menu-section'>
-      Links
-    </div>
-    <div class='menu-section'>
-      Cursor
-    </div>
-    <div class='menu-section'>
-      Pseudo classes
-    </div>
-    <div class='menu-section'>
-      CSS and JavaScript
+    <div id='menu-contents'>
+      <div class='menu-section'>
+        Introduction
+      </div>
+      <div class='menu-section'>
+        What you should already know
+      </div>
+      <div class='menu-section'>
+        CSS preprocessors
+      </div>
+      <div class='menu-section'>
+        Hello World
+      </div>
+      <div class='menu-section'>
+        Border
+      </div>
+      <div class='menu-section'>
+        Width
+      </div>
+      <div class='menu-section'>
+        Height
+      </div>
+      <div class='menu-section'>
+        Margin
+      </div>
+      <div class='menu-section'>
+        Padding
+      </div>
+      <div class='menu-section'>
+        Background
+      </div>
+      <div class='menu-section'>
+        Color
+      </div>
+      <div class='menu-section'>
+        Links
+      </div>
+      <div class='menu-section'>
+        Cursor
+      </div>
+      <div class='menu-section'>
+        Pseudo classes
+      </div>
+      <div class='menu-section'>
+        CSS and JavaScript
+      </div>
+      <div class='menu-section'>
+        Learn more
+      </div>
     </div>
   </div>
   <div id='docs'>
@@ -92,7 +100,7 @@
           &lt;/html>
         </code>
       </div>
-      To style an element we will need to assign the styles to that element specifically. There are three different ways to access an element in CSS. Firstly, an HTML tag can be accessed by its name, e.g.,
+      <p>To style an element we will need to assign the styles to that element specifically. There are three different ways to access an element in CSS. Firstly, an HTML tag can be accessed by its name, e.g.,</p>
       <div class='code'>
         <code>
           body {<br>
@@ -100,7 +108,7 @@
           }
         </code>
       </div>
-      If we tried to do this with the paragraph tags to style the text elements we would only be able to change both at the same time as any style assigned to a paragraph tag styles every paragraph tag. To style individual elements we use the IDs and class names as follows
+      <p>If we tried to do this with the paragraph tags to style the text elements we would only be able to change both at the same time as any style assigned to a paragraph tag styles every paragraph tag. To style individual elements we use the IDs and class names as follows</p>
       <div class='code'>
         <code>
           #id-text {<br>
@@ -111,11 +119,11 @@
           }
         </code>
       </div>
-      Any HTML element with an ID can be assigned styles with <code>#ID</code>, and any element with a class can be assigned styles with <code>.class</code>
+      <p>Any HTML element with an ID can be assigned styles with <code>#ID</code>, and any element with a class can be assigned styles with <code>.class</code></p>
     </div>
     <div class='docs-section'>
       <h1>Borders</h1>
-      To get a good idea of all the changes we will be making we will give our elements some borders. A border has a width, a style and a color, each of which can be assigned using
+      <p>To get a good idea of all the changes we will be making we will give our elements some borders. A border has a width, a style and a color, each of which can be assigned using</p>
       <div class='code'>
         <code>
           border-width: // width, e.g., 1px<br>
@@ -123,57 +131,70 @@
           border-color: // color, e.g., black
         </code>
       </div>
-      You can also set a border all in one with
+      <p>You can also set a all three border properties in one line with</p>
       <div class='code'>
         <code>
           border: width style color;
         </code>
       </div>
-      where the three properties can be written in any order. To see each of the changes we will assign the body and both text elements with different borders.
+      <p>The order of the three properties does not matter. We can set</p>
       <div class='code'>
         <code>
           body {<br>
             &nbsp;&nbsp;border: 1px solid black;<br>
           }<br>
           #id-text {<br>
-            &nbsp;&nbsp;border: 2px dashed red<br>
+            &nbsp;&nbsp;border: dashed 2px red<br>
           }<br>
           .class-text {<br>
-            &nbsp;&nbsp;border: 3px double blue<br>
+            &nbsp;&nbsp;border: double blue 3px<br>
           }<br>
         </code>
       </div>
-      The basic styles available for borders are dotted, dashed, solid, double, groove, ridge, inset, outset, none, and hidden. You can also access each side of the border using
-      <code>border-top</code>
-      <code>border-right</code>
-      <code>border-bottom</code>
-      <code>border-left</code>
-      and combine these to make more complex borders, e.g.,
+      <p>The basic styles available for borders are</p>
+      <div class='code'>
+         <code>dotted</code>,
+         <code>dashed</code>,
+         <code>solid</code>,
+         <code>double</code>,
+         <code>groove</code>,
+         <code>ridge</code>,
+         <code>inset</code>,
+         <code>outset</code>,
+         <code>none</code>, and
+         <code>hidden</code>.
+      </div>
+      <p>You can also access each side of the border using
+      <code>border-top</code>,
+      <code>border-right</code>,
+      <code>border-bottom</code>, and
+      <code>border-left</code>,
+      and combine these to make more complex borders, e.g.,</p>
       <div class='code'>
         <code>
           border-top: 1px solid black;<br>
           border-bottom: 2px dotted blue;
         </code>
       </div>
-      or in one line with
+      <p>or in one line with</p>
       <div class='code'>
         <code>
           border-color: top-color right-color bottom-color left-color;
         </code>
       </div>
-      or
+      <p>or</p>
       <div class='code'>
         <code>
           border-color: top-bottom-color right-left-color;
         </code>
       </div>
 
-      Do all three properties always need to be present? Example.
-      Rounded edges using border-radius.
+      <p>Do all three properties always need to be present? Example.
+      Rounded edges using border-radius.</p>
     </div>
     <div class='docs-section'>
       <h1>Code format</h1>
-      Before moving on to the rest of the documentation, it is important to format your code properly in order to get the styles you wish. Compare
+      <p>Before moving on to the rest of the documentation, it is important to format your code properly in order to get the styles you wish. Compare</p>
       <div class='code'>
         <code>
           body {<br>
@@ -182,16 +203,16 @@
           }
         </code>
       </div>
-      to
+      <p>to</p>
       <div class='code'>
         <code>
-          body {</br>
+          body {<br>
             &nbsp;&nbsp;margin-left: 0;<br>
             &nbsp;&nbsp;margin: 5px;<br>
           }
         </code>
       </div>
-      In the first example we have the margin on the left is 0, while in the second example the margin on the left is 5 pixels. If you have multiple commands styling the same element, only the last one will be used. While this may seem a little absurb an issue: why would we try to style something twice? This may not be a problem on a small project, but on a larger project, or one where you import other style sheets (e.g., Bootstrap) then it is possible to have elements styled in more place than one. If you are not seeing the CSS you have written being displayed properly, it is possible that the code is correct but different styles are defined elsewhere and take precedence. To deal with this, you can give any command precedence over all others by doing the following
+      <p>In the first example we have the margin on the left is 0, while in the second example the margin on the left is 5 pixels. If you have multiple commands styling the same element, only the last one will be used. While this may seem a little absurb an issue: why would we try to style something twice? This may not be a problem on a small project, but on a larger project, or one where you import other style sheets (e.g., Bootstrap) then it is possible to have elements styled in more place than one. If you are not seeing the CSS you have written being displayed properly, it is possible that the code is correct but different styles are defined elsewhere and take precedence. To deal with this, you can give any command precedence over all others by doing the following</p>
       <div class='code'>
         <code>
           body {<br>
@@ -200,46 +221,46 @@
           }
         </code>
       </div>
-      Now we see our margin on the left is 0 again. If a style you want is not displaying properly you can try to use this, but you should generally try to see if re-writing the code will get the styles you want first (e.g., the first example is a better way to remove the margin on the left than using <code>!important</code>). However, if you have imported many different styling packages sometimes and cannot find a simple fix for things being ignored, the important tag can be much simpler than looking through large packages and trying to re-write them.
+      <p>Now we see our margin on the left is 0 again. If a style you want is not displaying properly you can try to use this, but you should generally try to see if re-writing the code will get the styles you want first (e.g., the first example is a better way to remove the margin on the left than using <code>!important</code>). However, if you have imported many different styling packages sometimes and cannot find a simple fix for things being ignored, the important tag can be much simpler than looking through large packages and trying to re-write them.</p>
     </div>
     <div class='docs-section'>
       <h1>Width</h1>
-      Every element has a width.
+      <p>Every element has a width.</p>
 
-      Make page smaller with one paragraph larger, one smaller. Also cover overflow?
+      <p>Make page smaller with one paragraph larger, one smaller. Also cover overflow?</p>
     </div>
     <div class='docs-section'>
       <h1>Height</h1>
-      Similar to width, every element has a height
+      <p>Similar to width, every element has a height</p>
     </div>
     <div class='docs-section'>
       <h1>Margin</h1>
-      There are two main methods to alter the spacing of an element while not changing content inside the element, e.g., suppose we want to display our page in the middle of the window. We want to move this element to the center without changing its size or appearance. The first approach is with margins that give us a way to style how much space should be around an element. For example,
+      <p>There are two main methods to alter the spacing of an element while not changing content inside the element, e.g., suppose we want to display our page in the middle of the window. We want to move this element to the center without changing its size or appearance. The first approach is with margins that give us a way to style how much space should be around an element. For example,</p>
       <div class='code'>
         <code>
           margin: 5px;
         </code>
       </div>
-      will put 5 pixels of space around any element it is assigned to. Again, we can assign each side individually with
+      <p>will put 5 pixels of space around any element it is assigned to. Again, we can assign each side individually with
       <code>margin-top</code>
       <code>margin-right</code>
       <code>margin-bottom</code>
       <code>margin-left</code>
-      or in one line as
+      or in one line as</p>
       <div class='code'>
         <code>
           margin: margin-top margin-right margin-bottom margin-left;
         </code>
       </div>
-      or
+      <p>or</p>
       <div class='code'>
         <code>
           margin: margin-top-bottom margin-right-left;
         </code>
       </div>
-      Example ...
+      <p>Example ...</p>
 
-      One special value that can be applied to margins is <code>auto</code>. This allows us to center an object automatically using CSS instead of having to compute how large the element is, how large the page is, and center accordingly.
+      <p>One special value that can be applied to margins is <code>auto</code>. This allows us to center an object automatically using CSS instead of having to compute how large the element is, how large the page is, and center accordingly.</p>
       <div class='code'>
         <code>
           body {<br>
@@ -247,40 +268,40 @@
           }
         </code>
       </div>
-      However, note the following does not change anything
+      <p>However, note the following does not change anything</p>
       <div class='code'>
         <code>
           body {<br>
-            &nbsp;&nbsp;margin: auto 0;
+            &nbsp;&nbsp;margin: auto 0;<br>
           }
         </code>
       </div>
-      Explanation. Width is easy, height is relative; Why?
+      <p>Explanation. Width is easy, height is relative; Why?</p>
     </div>
     <div class='docs-section'>
       <h1>Padding</h1>
-      While a margin adds space around an element, sometimes you may wish to add space inside the element. For example, instead of putting space around the first paragraph, maybe we want to push the border out with space inside. Similar to margins we can do this with
+      <p>While a margin adds space around an element, sometimes you may wish to add space inside the element. For example, instead of putting space around the first paragraph, maybe we want to push the border out with space inside. Similar to margins we can do this with</p>
       <div class='code'>
         <code>
           padding: 5px;
         </code>
       </div>
-      or to each side individually, or the combinations in one line, as above. Together, we can do ...
+      <p>or to each side individually, or the combinations in one line, as above. Together, we can do ...</p>
     </div>
     <div class='docs-section'>
       <h1>Background</h1>
-      If we don't want our space, or specific elements in our page, to have a white background, we may use
+      <p>If we don't want our space, or specific elements in our page, to have a white background, we may use</p>
       <div class='code'>
         <code>
           background: // colour, e.g., black
         </code>
       </div>
-      The background style will change everything within the border, but not outside, so depending on how you wish to style an element with a background you should select either margin or padding carefully.
-      E.g., margin on one, padding on the other.
+      <p>The background style will change everything within the border, but not outside, so depending on how you wish to style an element with a background you should select either margin or padding carefully.
+      E.g., margin on one, padding on the other.</p>
     </div>
     <div class='docs-section'>
       <h1>Color</h1>
-      If we try to make the background of any of the elements in our Hello World page black, we will not be able to see the text. Similar to the background command we can change the text colour of an element with
+      <p>If we try to make the background of any of the elements in our Hello World page black, we will not be able to see the text. Similar to the background command we can change the text colour of an element with</p>
       <div class='code'>
         <code>
           color: // color, e.g., white
@@ -289,47 +310,52 @@
     </div>
     <div class='docs-section'>
       <h1>Links</h1>
-      Something ubiquitous on the web: hyperlinks. While they are almost simply text displaying on the page that have a function, there is a lot more to style than simply the colour of the text. For example, on an unstyled page a link is displayed in the colour blue, however after you have clicked on the link it will turn purple. There are four different styles on can apply to links. To style all hyperlinks we have
-      <div>
-        <code>a:link</code> -- a normal, unvisited link
-        <code>a:visited</code> -- a link after the user has visited
-        <code>a:hover</code> -- a link when the user hovers over it
+      <p>Something ubiquitous on the web: hyperlinks. While they are almost simply text displaying on the page that have a function, there is a lot more to style than simply the colour of the text. For example, on an unstyled page a link is displayed in the colour blue, however after you have clicked on the link it will turn purple. There are four different styles on can apply to links. To style all hyperlinks we have</p>
+      <div class='non-code-block'>
+        <code>a:link</code> -- a normal, unvisited link<br>
+        <code>a:visited</code> -- a link after the user has visited<br>
+        <code>a:hover</code> -- a link when the user hovers over it<br>
         <code>a:active</code> -- a link when it is being clicked
       </div>
-      To style particular hyperlinks you simply need to give them an id or class and use the id name or class name instead.
+      <p>To style particular hyperlinks you simply need to give them an id or class and use the id name or class name instead.</p>
       
-      You have like seen pages with the default
+      <p>You have like seen pages with the default
       // link blue and visited purple
       As these occur in a particular order, e.g., visited only occurs after a link has been visited, we must be careful to style these in order.
       hover after link/visited
       active after hover
-      What if we don't? Example...
+      What if we don't? Example...</p>
 
-      Lastly, we can change the underline as well.
+      <p>Lastly, we can change the underline as well.
       // text-decoration
-      Note that in every situation we have the dotted outline when and after clicking a link. This can be removed with focus, however this is not recommended in most situations as the dotted line can be used as an accessibility feature. Namely, for someone that is not using a mouse the dotted line around the link is the only way to tell that it is active. Removing this would mean some users would not be able to open links without much more work. (Imagine a page with links displayed on top of one another, beside on another, in different div elements also styled around the page.)
+      Note that in every situation we have the dotted outline when and after clicking a link. This can be removed with focus, however this is not recommended in most situations as the dotted line can be used as an accessibility feature. Namely, for someone that is not using a mouse the dotted line around the link is the only way to tell that it is active. Removing this would mean some users would not be able to open links without much more work. (Imagine a page with links displayed on top of one another, beside on another, in different div elements also styled around the page.)</p>
     </div>
     <div class='docs-section'>
       <h1>Cursor</h1>
-      Note that when we hover over a link the mouse changes. This is...
+      <p>Note that when we hover over a link the mouse changes. This is...</p>
       // cursor
     </div>
     <div class='docs-section'>
       <h1>Pseudo classes</h1>
-      The styling we saw with links is an example of a pseudo class and not simply something only to style links. For example
+      <p>The styling we saw with links is an example of a pseudo class and not simply something only to style links. For example
       // style something with a background changing with hover.
 
-      :after needs content or context(?)
+      :after needs content or context(?)</p>
     </div>
     <div class='docs-section'>
       <h1>CSS and JavaScript</h1>
-      Pseudo classes allow us to a lot more with styles, but using JavaScript you can do vastly more.
+      <p>Pseudo classes allow us to a lot more with styles, but using JavaScript you can do vastly more.
       .style ...
       You can both set a style that doesn't exist, or change a style that does.
 
       In jQuery this is $()....
-      In React you use refs or inline styles
+      In React you use refs or inline styles</p>
       
+    </div>
+    <div class='docs-section'>
+      <h1>Learn more</h1>
+      <p>W3, MDN, CSStricks, ...</p>
+    
     </div>
   </div>
 
