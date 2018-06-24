@@ -6,85 +6,62 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>CSS Technical Documentation Page</title>
   <link rel='icon' type='image/png' href='./favicon.png' />
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
 </head>
 
 <body>
-  <div id='menu'>
-    <div id='menu-header'>
-      CSS Documentation
+  <nav id='navbar'>
+    <header>CSS Documentation</header>
+    <ul>
+      <a class='nav-link' href='#Introduction' rel='internal'><li>Introduction</li></a>
+      <a class='nav-link' href='#What_you_should_already_know' rel='internal'><li>What you should already know</li></a>
+      <a class='nav-link' href='#CSS_preprocessors' rel='internal'><li>CSS preprocessors</li></a>
+      <a class='nav-link' href='#Hello_World' rel='internal'><li>Hello World</li></a>
+      <a class='nav-link' href='#Borders' rel='internal'><li>Borders</li></a>
+      <a class='nav-link' href='#Code_format' rel='internal'><li>Code format</li></a>
+      <a class='nav-link' href='#Width' rel='internal'><li>Width</li></a>
+      <a class='nav-link' href='#Height' rel='internal'><li>Height</li></a>
+      <a class='nav-link' href='#Margin' rel='internal'><li>Margin</li></a>
+      <a class='nav-link' href='#Padding' rel='internal'><li>Padding</li></a>
+      <a class='nav-link' href='#Background' rel='internal'><li>Background</li></a>
+      <a class='nav-link' href='#Color' rel='internal'><li>Color</li></a>
+      <a class='nav-link' href='#Links' rel='internal'><li>Links</li></a>
+      <a class='nav-link' href='#Cursor' rel='internal'><li>Cursor</li></a>
+      <a class='nav-link' href='#Pseudo_classes' rel='internal'><li>Pseudo classes</li></a>
+      <a class='nav-link' href='#CSS_and_JavaScript' rel='internal'><li>CSS and JavaScript</li></a>
+      <a class='nav-link' href='#Learn_more' rel='internal'><li>Learn more</li></a>
+    </ul>
+    
     </div>
-    <div id='menu-contents'>
-      <div class='menu-section'>
-        Introduction
-      </div>
-      <div class='menu-section'>
-        What you should already know
-      </div>
-      <div class='menu-section'>
-        CSS preprocessors
-      </div>
-      <div class='menu-section'>
-        Hello World
-      </div>
-      <div class='menu-section'>
-        Border
-      </div>
-      <div class='menu-section'>
-        Width
-      </div>
-      <div class='menu-section'>
-        Height
-      </div>
-      <div class='menu-section'>
-        Margin
-      </div>
-      <div class='menu-section'>
-        Padding
-      </div>
-      <div class='menu-section'>
-        Background
-      </div>
-      <div class='menu-section'>
-        Color
-      </div>
-      <div class='menu-section'>
-        Links
-      </div>
-      <div class='menu-section'>
-        Cursor
-      </div>
-      <div class='menu-section'>
-        Pseudo classes
-      </div>
-      <div class='menu-section'>
-        CSS and JavaScript
-      </div>
-      <div class='menu-section'>
-        Learn more
-      </div>
-    </div>
-  </div>
-  <div id='docs'>
-    <div class='docs-section'>
-      <h1>Introduction</h1>
+  </nav>
+  <main id='main-doc'>
+    <section class='main-section' id='Introduction'>
+      <header>Introduction</header>
+      <p>Back when the internet and the World Wide Web were not common household terms, HTML was a standalone language for developing webpages. For example, one could use
+        <div class='code'>
+          &lt;font color='blue'>&lt;/font>
+        </div>
+        <font color='blue'>to make text blue</font>. To add space between two elements we could add an element and colour the same as the background or add spaces one character at a time with <code>&amp;nbsp;</code>, such&nbsp;&nbsp;&nbsp; as &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+      </p>
+      <p>There are two drawbacks to this approach. Firstly, it makes the HTML code a lot more complex if you have a large page with hundreds of styles added in everywhere. More problematic, suppose you have many lines that are all coloured blue. Then you decide to change the background colour of the page and the blue does not look nice. Now you have to dive through every single one of those styled HTML tags and change each one. This motivated developing a separate language for styling webpages, both cleaner and simpler.</p>
       <p>Styling HTML in the before time.</p>
-      <p>Cascading Style Sheets (CSS)</p>
+      <p>Cascading Style Sheets (CSS), cascading because of how styles are applied (see below)</p>
       <p>We can control how to display HTML elements, how to make them look, or whether to display things or not, all while allowing you to change the display depending on the users device and interaction.</p>
 
-      <p>Note that the following is only a preliminary guide to CSS and not designed to be comprehensive. For more information, see MDN, W3, CSStricks or search on stackexchange and google</p>
+      <!--p>Note that the following is only a preliminary guide to CSS and not designed to be comprehensive. For more information, see MDN, W3, CSStricks or search on stackexchange and google</p-->
 
       <!-- Maybe add links to blank popups with each output? -->
-    </div>
-    <div class='docs-section'>
-      <h1>What you should already know</h1>
-      <p>In this doc we assume you are familiar and comfortable with HTML. Only the last section assumes knowledge of Javascript, as we demonstrate how to control CSS with far more reach than what pseudo classes allow.</p>
-    </div>
-    <div class='docs-section'>
-      <h1>CSS preprocessors</h1>
+    </section>
+    <section class='main-section' id='What_you_should_already_know'>
+      <header>What you should already know</header>
+      <p>In this doc we assume you are familiar and comfortable with HTML. Only the last section assumes knowledge of Javascript, as we demonstrate how a very powerful way to control a document's CSS.</p>
+    </section>
+    <section class='main-section' id='CSS_preprocessors'>
+      <header>CSS preprocessors</header>
       <p>SCSS, LESS, etc... far more control than CSS alone, compile CSS so isn't technically different (?) but different as things compile and that's it.</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Hello World</h1>
+    </section>
+    <section class='main-section' id='Hello_World'>
+      <header>Hello World</header>
       <p>To demonstrate the different feautres of CSS discussed here we will be styling the following simple page</p>
       <div class='code'>
         <code>
@@ -100,7 +77,7 @@
           &lt;/html>
         </code>
       </div>
-      <p>To style an element we will need to assign the styles to that element specifically. There are three different ways to access an element in CSS. Firstly, an HTML tag can be accessed by its name, e.g.,</p>
+      <p>To style an element we will need to assign the styles to that element specifically. To do this we use <em>selectors</em> to declare what elements a style is to be applied. There are three different ways to access an element in CSS. Firstly, an HTML tag can be accessed by its name, e.g.,</p>
       <div class='code'>
         <code>
           body {<br>
@@ -120,9 +97,9 @@
         </code>
       </div>
       <p>Any HTML element with an ID can be assigned styles with <code>#ID</code>, and any element with a class can be assigned styles with <code>.class</code></p>
-    </div>
-    <div class='docs-section'>
-      <h1>Borders</h1>
+    </section>
+    <section class='main-section' id='Borders'>
+      <header>Borders</header>
       <p>To get a good idea of all the changes we will be making we will give our elements some borders. A border has a width, a style and a color, each of which can be assigned using</p>
       <div class='code'>
         <code>
@@ -191,9 +168,9 @@
 
       <p>Do all three properties always need to be present? Example.
       Rounded edges using border-radius.</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Code format</h1>
+    </section>
+    <section class='main-section' id='Code_format'>
+      <header>Code format</header>
       <p>Before moving on to the rest of the documentation, it is important to format your code properly in order to get the styles you wish. Compare</p>
       <div class='code'>
         <code>
@@ -222,19 +199,19 @@
         </code>
       </div>
       <p>Now we see our margin on the left is 0 again. If a style you want is not displaying properly you can try to use this, but you should generally try to see if re-writing the code will get the styles you want first (e.g., the first example is a better way to remove the margin on the left than using <code>!important</code>). However, if you have imported many different styling packages sometimes and cannot find a simple fix for things being ignored, the important tag can be much simpler than looking through large packages and trying to re-write them.</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Width</h1>
+    </section>
+    <section class='main-section' id='Width'>
+      <header>Width</header>
       <p>Every element has a width.</p>
 
       <p>Make page smaller with one paragraph larger, one smaller. Also cover overflow?</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Height</h1>
+    </section>
+    <section class='main-section' id='Height'>
+      <header>Height</header>
       <p>Similar to width, every element has a height</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Margin</h1>
+    </section>
+    <section class='main-section' id='Margin'>
+      <header>Margin</header>
       <p>There are two main methods to alter the spacing of an element while not changing content inside the element, e.g., suppose we want to display our page in the middle of the window. We want to move this element to the center without changing its size or appearance. The first approach is with margins that give us a way to style how much space should be around an element. For example,</p>
       <div class='code'>
         <code>
@@ -277,9 +254,9 @@
         </code>
       </div>
       <p>Explanation. Width is easy, height is relative; Why?</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Padding</h1>
+    </section>
+    <section class='main-section' id='Padding'>
+      <header>Padding</header>
       <p>While a margin adds space around an element, sometimes you may wish to add space inside the element. For example, instead of putting space around the first paragraph, maybe we want to push the border out with space inside. Similar to margins we can do this with</p>
       <div class='code'>
         <code>
@@ -287,9 +264,9 @@
         </code>
       </div>
       <p>or to each side individually, or the combinations in one line, as above. Together, we can do ...</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Background</h1>
+    </section>
+    <section class='main-section' id='Background'>
+      <header>Background</header>
       <p>If we don't want our space, or specific elements in our page, to have a white background, we may use</p>
       <div class='code'>
         <code>
@@ -298,24 +275,26 @@
       </div>
       <p>The background style will change everything within the border, but not outside, so depending on how you wish to style an element with a background you should select either margin or padding carefully.
       E.g., margin on one, padding on the other.</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Color</h1>
+    </section>
+    <section class='main-section' id='Color'>
+      <header>Color</header>
       <p>If we try to make the background of any of the elements in our Hello World page black, we will not be able to see the text. Similar to the background command we can change the text colour of an element with</p>
       <div class='code'>
         <code>
           color: // color, e.g., white
         </code>
       </div>
-    </div>
-    <div class='docs-section'>
-      <h1>Links</h1>
+    </section>
+    <section class='main-section' id='Links'>
+      <header>Links</header>
       <p>Something ubiquitous on the web: hyperlinks. While they are almost simply text displaying on the page that have a function, there is a lot more to style than simply the colour of the text. For example, on an unstyled page a link is displayed in the colour blue, however after you have clicked on the link it will turn purple. There are four different styles on can apply to links. To style all hyperlinks we have</p>
       <div class='non-code-block'>
-        <code>a:link</code> -- a normal, unvisited link<br>
-        <code>a:visited</code> -- a link after the user has visited<br>
-        <code>a:hover</code> -- a link when the user hovers over it<br>
-        <code>a:active</code> -- a link when it is being clicked
+        <ul>
+          <li><code>a:link</code> -- a normal, unvisited link</li>
+          <li><code>a:visited</code> -- a link after the user has visited</li>
+          <li><code>a:hover</code> -- a link when the user hovers over it</li>
+          <li><code>a:active</code> -- a link when it is being clicked</li>
+        </ul>
       </div>
       <p>To style particular hyperlinks you simply need to give them an id or class and use the id name or class name instead.</p>
       
@@ -329,21 +308,27 @@
       <p>Lastly, we can change the underline as well.
       // text-decoration
       Note that in every situation we have the dotted outline when and after clicking a link. This can be removed with focus, however this is not recommended in most situations as the dotted line can be used as an accessibility feature. Namely, for someone that is not using a mouse the dotted line around the link is the only way to tell that it is active. Removing this would mean some users would not be able to open links without much more work. (Imagine a page with links displayed on top of one another, beside on another, in different div elements also styled around the page.)</p>
-    </div>
-    <div class='docs-section'>
-      <h1>Cursor</h1>
-      <p>Note that when we hover over a link the mouse changes. This is...</p>
-      // cursor
-    </div>
-    <div class='docs-section'>
-      <h1>Pseudo classes</h1>
+    </section>
+    <section class='main-section' id='Cursor'>
+      <header>Cursor</header>
+      <p>Note that when we hover over a link the mouse changes. This can be controlled with the cursor property. There are many values that can be used, some of the most common are
+        <ul>
+          <li><code>cursor: pointer;</code></li>
+          <li><code>cursor: progress;</code></li>
+          <li><code>cursor: text;</code></li>
+        </ul>
+        The cursor
+      </p>
+    </section>
+    <section class='main-section' id='Pseudo_classes'>
+      <header>Pseudo classes</header>
       <p>The styling we saw with links is an example of a pseudo class and not simply something only to style links. For example
       // style something with a background changing with hover.
 
       :after needs content or context(?)</p>
-    </div>
-    <div class='docs-section'>
-      <h1>CSS and JavaScript</h1>
+    </section>
+    <section class='main-section' id='CSS_and_JavaScript'>
+      <header>CSS and JavaScript</header>
       <p>Pseudo classes allow us to a lot more with styles, but using JavaScript you can do vastly more.
       .style ...
       You can both set a style that doesn't exist, or change a style that does.
@@ -351,13 +336,13 @@
       In jQuery this is $()....
       In React you use refs or inline styles</p>
       
-    </div>
-    <div class='docs-section'>
-      <h1>Learn more</h1>
+    </section>
+    <section class='main-section' id='Learn_more'>
+      <header>Learn more</header>
       <p>W3, MDN, CSStricks, ...</p>
     
-    </div>
-  </div>
+    </section>
+  </main>
 
   <div id="app"></div>
   <script src="./bundle.js"></script>

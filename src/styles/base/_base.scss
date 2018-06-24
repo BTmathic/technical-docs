@@ -16,45 +16,62 @@ button:disabled {
   cursor: default;
 }
 
-#menu {
+#navbar {
   border-right: 2px solid #C0C0C0;
-  color: darken(#C0C0C0, 25%);
+  color: $menu-color;
   height: 100vh;
   position: fixed;
-  #menu-contents {
+  #navbar-contents {
     height: 90vh;
     overflow: scroll;
     div {
-      border: 1px solid #C0C0C0;
+      border: 1px solid $menu-color;
       font-size: 125%;
       width: 250px;
     }
   }
-  #menu-header {
-    border: 2px solid #C0C0C0;
+  header {
+    border: 2px solid $menu-color;
+    color: black;
     font-size: 125%;
     font-weight: bold;
     padding: 25px 5px 25px 10px;
   }
-  .menu-section {
-    cursor: pointer;
-    padding: 10px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-  .menu-section:hover {
-    background: lighten(grey,20%);
+  .nav-link {
+    color: $menu-color;
+    cursor: pointer;
+    text-decoration: none;
+    li {
+      border: 1px solid $menu-color;
+      padding: 10px;
+      width: 250px;
+    }
+    li:hover {
+      background: lighten(grey,20%);
+      color: white;
+    }
   }
 }
 
-#docs {
+#main-doc {
+  margin-left: 325px;
   padding-right: 10px;
-  h1 {
-    padding-left: 325px;
+  header {
+    font-size: 150%;
+    font-weight: bold;
+    padding: 10px 0;
   }
-  p {
-    margin-left: 350px;
+  p, font {
+    color: $menu-color;
+    margin-left: 25px;
   }
   .code, .non-code-block {
-    margin-left: 375px;
+    margin-left: 50px;
   }
   code, .code {
     background: lightGrey;
@@ -63,6 +80,12 @@ button:disabled {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 10px;
-    width: calc(90% - 375px);
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 125%;
   }
 }
