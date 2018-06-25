@@ -21,7 +21,7 @@ button:disabled {
   color: $menu-color;
   height: 100vh;
   position: fixed;
-  #navbar-contents {
+  ul {
     height: 90vh;
     overflow: scroll;
     div {
@@ -66,8 +66,7 @@ button:disabled {
     font-weight: bold;
     padding: 10px 0;
   }
-  p, font {
-    color: $menu-color;
+  p {
     margin-left: 25px;
   }
   .code, .non-code-block {
