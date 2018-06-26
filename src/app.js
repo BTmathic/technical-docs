@@ -1,2 +1,2 @@
-import 'normalize.css/normalize.css'; // reset all browser conventions
+import 'normalize.css/normalize.css';
 import './styles/styles.scss';
