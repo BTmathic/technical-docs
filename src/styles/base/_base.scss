@@ -85,8 +85,43 @@ button:disabled {
   }
 }
 
-@media (min-width: 768px) {
-  h2 {
-    font-size: 125%;
+#mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    background: white;
+    opacity: 1;
+    width: 20px;
+    z-index: 1;
+  }
+  #navbar header {
+    border: none;
+    width: 250px;
+  }
+  #navbar ul {
+    display: none;
+  }
+  #navbar:hover {
+    width: 250px;
+    ul {
+      display: block;
+    }
+    #mobile-only {
+      display: none;
+    }
+  }
+
+  #main-doc {
+    margin-left: 25px;
+    margin-top: 75px;
+    position: fixed;
+    overflow: scroll;
+    height: 90vh;
+  }
+
+  #mobile-only {
+    display: inline;
   }
 }
