@@ -4,6 +4,6 @@ A technical documentation page for (basic) CSS.
 
 ### Build Tools
 
-* Webpack
+* Parcel
 * Yarn
 * Babel
