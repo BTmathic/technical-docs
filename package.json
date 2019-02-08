@@ -1,12 +1,12 @@
 {
-  "name": "boiler-plate",
+  "name": "tech-docs",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Alexander Molnar",
   "license": "MIT",
   "scripts": {
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html --out-dir prod"
   },
   "dependencies": {
     "node-sass": "4.5.3",
